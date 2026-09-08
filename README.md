@@ -27,14 +27,14 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
 
 ## Challenges & Debugging
 
-**DHT11 returning error `-3` (connect error)**
-Initial wiring had the signal (`S`) and power (`+`) pins swapped on the 3-pin module. The sensor never received power correctly, so it couldn't respond to the Arduino's request. Fixed by rewiring according to the module's actual pin labels.
+**DHT11 returning error -3 (connect error)**
+Initial wiring had the signal S and power + pins swapped on the 3-pin module. The sensor never received power correctly, so it couldn't respond to the Arduino's request. Fixed by rewiring according to the module's actual pin labels.
 
 **Servo buzzing and DHT11 errors reappearing once the servo was added**
-After wiring the servo, it buzzed instead of moving cleanly, and the DHT11 showed errors again (`-4`, ACK stuck low).It traced back to the same problem, the servo and DHT11 were sharing the Arduino's 5V rail. The power wasn`t enough for both components so neither worked.
+After wiring the servo, it buzzed instead of moving cleanly, and the DHT11 showed errors again (-4, ACK stuck low).It traced back to the same problem, the servo and DHT11 were sharing the Arduino's 5V rail. The power wasn`t enough for both components so neither worked.
 
 Attempted fixes that **didn't** work:
-- A 9V battery + 220Ω resistor for the servo — The buzzing didn`t stop,probably because it still wans`t enough power in the battery or the servo was overloaded.
+- A 9V battery + 220Ω resistor for the servo — The buzzing did not stop,probably because it still was not enough power in the battery or the servo was overloaded.
 - Powering the DHT11 and servo from a second 9V battery — they were both curent starved.
 
 **What actually fixed it:**
