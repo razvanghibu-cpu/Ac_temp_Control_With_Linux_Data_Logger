@@ -16,13 +16,13 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
    - Temp < 22°C and AC currently on → turn AC off
    - Otherwise → do nothing (AC stays in its current state)
 3.  A servo sweeps from a neutral position to press the AC's physical power button, then returns to neutral.
-4.  The cycle runs every 2 minutes, since room temperature changes slowly and doesn't need faster polling.
+    The cycle runs every 2 minutes, since room temperature changes slowly and doesn't need faster polling.
 
 ## Hardware Used
 - Arduino Uno
 - DHT11 temperature/humidity sensor (3-pin module)
 - SG90 Servo
-- 
+- 3 Wires 
 
 
 
