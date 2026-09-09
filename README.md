@@ -18,9 +18,7 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
 3.  A servo sweeps from a neutral position to press the AC's physical power button, then returns to neutral.
     The cycle runs every 2 minutes, since room temperature changes slowly and doesn't need faster polling.
 
-   **Video of the servo pressing the button:**
-
-   ![demvideo](images/Pressing_demonstration.gif)
+   **Video of the servo pressing the button [here](images/Pressing_demonstration.gif)**.
    
 
 ## Hardware Used
@@ -31,6 +29,27 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
   
    **Schematic:**
 ![schematic](images/accontrolschematic.png)
+
+
+## Data logging part
+1. Find Arduino port:
+
+
+   **ls /dev/tty***
+
+   
+2.Install moreutils for timestamps
+
+
+3.set correct baud rate:
+ **stty -F /dev/ttyACM0 9600** (my port was ACM0)
+   
+4.Start logging:
+   **cat /dev/ttyACM0 | ts '%Y-%m-%d %H:%M:%S' > ac_log.txt**
+   
+   It now starts logging int the ac_log text file.
+   Example of a few entrys i had:
+   
 
 ## Challenges & Debugging
 
