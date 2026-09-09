@@ -18,7 +18,9 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
 3.  A servo sweeps from a neutral position to press the AC's physical power button, then returns to neutral.
     The cycle runs every 2 minutes, since room temperature changes slowly and doesn't need faster polling.
 
-   **Video of the servo pressing the button**
+   **Video of the servo pressing the button:**
+
+   ![demvideo](images/Pressing_demonstration.gif)
    
 
 ## Hardware Used
