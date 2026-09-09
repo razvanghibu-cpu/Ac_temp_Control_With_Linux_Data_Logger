@@ -78,6 +78,8 @@ Attempted fixes that **didn't** work:
 **What actually fixed it:**
 Powering the DHT11 from Arduino 3.3V pin and the servo from the 5V pin.
 
+## Photo of the whole setup
+![fullsetup](images/fullsetup.jpeg)
 
 
 
