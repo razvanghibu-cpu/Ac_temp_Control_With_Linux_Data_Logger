@@ -49,6 +49,18 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
    
    It now starts logging int the ac_log text file.
    Example of a few entrys i had:
+
+```
+2026-09-08 18:29:15 Code:0,25°C,AC:OFF
+
+2026-09-08 18:31:15 Code:0,26°C,AC:OFF
+
+2026-09-08 18:33:17 Code:0,26°C,AC:ON
+
+2026-09-08 18:35:18 Code:0,25°C,AC:ON
+
+2026-09-08 18:37:18 Code:0,24°C,AC:ON
+```
    
 
 ## Challenges & Debugging
