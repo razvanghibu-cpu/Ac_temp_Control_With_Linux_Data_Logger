@@ -18,12 +18,17 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
 3.  A servo sweeps from a neutral position to press the AC's physical power button, then returns to neutral.
     The cycle runs every 2 minutes, since room temperature changes slowly and doesn't need faster polling.
 
+   **Video of the servo pressing the button**
+   
+
 ## Hardware Used
 - Arduino Uno
 - DHT11 temperature/humidity sensor (3-pin module)
 - SG90 Servo
 - Wires
-
+  
+   **Schematic:**
+![schematic](images/accontrolschematic.png)
 
 ## Challenges & Debugging
 
