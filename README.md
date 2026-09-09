@@ -38,16 +38,16 @@ The system reads room temperature every 2 minutes using a DHT11 sensor. If the t
    **ls /dev/tty***
 
    
-2.Install moreutils for timestamps
+2. Install moreutils for timestamps
 
 
-3.set correct baud rate:
+3. Set correct baud rate:
  **stty -F /dev/ttyACM0 9600** (my port was ACM0)
    
-4.Start logging:
+4. Start logging:
    **cat /dev/ttyACM0 | ts '%Y-%m-%d %H:%M:%S' > ac_log.txt**
    
-   It now starts logging int the ac_log text file.
+   It now starts logging in the ac_log text file.
    Example of a few entrys i had:
 
 ```
@@ -73,7 +73,7 @@ After wiring the servo, it buzzed instead of moving cleanly, and the DHT11 showe
 
 Attempted fixes that **didn't** work:
 - A 9V battery + 220Ω resistor for the servo — The buzzing did not stop,probably because it still was not enough power in the battery or the servo was overloaded.
-- Powering the DHT11 and servo from a second 9V battery — they were both curent starved.
+- Powering the DHT11 and servo from a second 9V battery — they were both current starved.
 
 **What actually fixed it:**
 Powering the DHT11 from Arduino 3.3V pin and the servo from the 5V pin.
